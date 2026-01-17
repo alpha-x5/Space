@@ -1,5 +1,9 @@
 import { useEffect } from 'react';
 import ScrollGlobe from './components/ui/scroll-globe';
+import MissionOverview from './components/sections/MissionOverview';
+import WhatIsShakthiSat from './components/sections/WhatIsShakthiSat';
+import Why108Countries from './components/sections/Why108Countries';
+import WhyGirlsInSpace from './components/sections/WhyGirlsInSpace';
 
 function App() {
   useEffect(() => {
@@ -40,23 +44,6 @@ function App() {
       ]
     },
     {
-      id: "why-girls-in-space",
-      badge: "Why Girls in Space",
-      title: "Equal Access",
-      subtitle: "To Infinity",
-      description: "Only 11% of all astronauts launched to space have been women. The gender gap in space and STEM fields remains significant. ShakthiSAT is our answer—an initiative to ignite passion, nurture leadership, and dismantle limits. We believe every girl deserves the chance to reach beyond the sky.",
-      align: "left" as const,
-      features: [
-        { title: "Ignite Passion", description: "Spark curiosity and wonder in young minds" },
-        { title: "Nurture Leadership", description: "Build confidence and essential STEM skills" },
-        { title: "Dismantle Limits", description: "Break barriers and challenge stereotypes" }
-      ],
-      actions: [
-        { label: "Support Girls in STEM", variant: "primary" as const },
-        { label: "View Statistics", variant: "secondary" as const }
-      ]
-    },
-    {
       id: "why-108-countries",
       badge: "Why 108 Countries",
       title: "Cosmic Harmony",
@@ -72,6 +59,23 @@ function App() {
         { label: "Explore Global Impact", variant: "primary" as const },
         { label: "Join 108 Nations", variant: "secondary" as const }
       ]
+    },
+    {
+      id: "why-girls-in-space",
+      badge: "Why Girls in Space",
+      title: "Equal Access",
+      subtitle: "To Infinity",
+      description: "Only 11% of all astronauts launched to space have been women. The gender gap in space and STEM fields remains significant. ShakthiSAT is our answer—an initiative to ignite passion, nurture leadership, and dismantle limits. We believe every girl deserves the chance to reach beyond the sky.",
+      align: "left" as const,
+      features: [
+        { title: "Ignite Passion", description: "Spark curiosity and wonder in young minds" },
+        { title: "Nurture Leadership", description: "Build confidence and essential STEM skills" },
+        { title: "Dismantle Limits", description: "Break barriers and challenge stereotypes" }
+      ],
+      actions: [
+        { label: "Support Girls in STEM", variant: "primary" as const },
+        { label: "View Statistics", variant: "secondary" as const }
+      ]
     }
   ];
 
@@ -79,8 +83,8 @@ function App() {
     positions: [
       { top: "50%", left: "75%", scale: 1.2 },  // Mission Overview: Right side
       { top: "30%", left: "25%", scale: 0.8 },  // What is ShakthiSAT: Left side, subtle
-      { top: "70%", left: "80%", scale: 1.5 },  // Why Girls: Right side, prominent
       { top: "40%", left: "50%", scale: 1.8 },  // Why 108: Center, large backdrop
+      { top: "70%", left: "80%", scale: 1.5 },  // Why Girls: Right side, prominent
     ]
   };
 
@@ -91,6 +95,14 @@ function App() {
         globeConfig={globeConfig}
         className="bg-gradient-to-br from-black via-purple-900/10 to-teal-900/10"
       />
+      
+      {/* Original sections as fallback/additional content */}
+      <div className="hidden">
+        <MissionOverview />
+        <WhatIsShakthiSat />
+        <Why108Countries />
+        <WhyGirlsInSpace />
+      </div>
     </div>
   );
 }

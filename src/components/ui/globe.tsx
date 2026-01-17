@@ -20,8 +20,8 @@ const Globe: React.FC = () => {
           className="relative w-[250px] h-[250px] rounded-full overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.2),-5px_0_8px_#c3f4ff_inset,15px_2px_25px_#000_inset,-24px_-2px_34px_#c3f4ff99_inset,250px_0_44px_#00000066_inset,150px_0_38px_#000000aa_inset]"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?q=80&w=1000&auto=format&fit=crop')",
-            backgroundSize: "cover",
-            backgroundPosition: "left",
+            backgroundSize: "400px 250px",
+            backgroundPosition: "left center",
             animation: "earthRotate 30s linear infinite",
           }}
         >

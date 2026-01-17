@@ -81,6 +81,26 @@ html {
   -webkit-backdrop-filter: blur(10px);
 }
 
+/* ScrollGlobe animations */
+@keyframes fadeOutLabel {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0.5rem) scale(0.95);
+  }
+}
+
+.animate-fadeOut {
+  animation: fadeOutLabel 2s ease-in-out forwards;
+}
+
 @layer base {
   :root {
     --background: 0 0% 0%;
